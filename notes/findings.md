@@ -32,3 +32,10 @@
 - Low-price anomaly flag (price disproportionately low vs freight_value)
 - Date range / freshness check — flag shipping_limit_date values that fall outside the expected order timeline (the 2020-04-09 max needs investigation first)
 - Schema/format validation on customer_state against the known list of 27 valid Brazilian state codes
+
+# Day 2 — shipping_limit_date investigation
+- Order c2bb89b5c1dd978d507284be78a04cb2: purchased 2017-05-23, delivered 2017-06-09
+- shipping_limit_date for this order's items: 2020-04-09 (isolated to this one order)
+- Conclusion: confirmed data entry error — shipping_limit_date logically must precede delivery,but here it's ~3 years AFTER delivery. This is a referential/ logical anomaly, not a real event.
+- Good candidate for a "date logic" check on Day 2: shipping_limit_date should never exceed order_delivered_customer_date or order_estimated_delivery_date
+
