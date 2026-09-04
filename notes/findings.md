@@ -39,3 +39,5 @@
 - Conclusion: confirmed data entry error — shipping_limit_date logically must precede delivery,but here it's ~3 years AFTER delivery. This is a referential/ logical anomaly, not a real event.
 - Good candidate for a "date logic" check on Day 2: shipping_limit_date should never exceed order_delivered_customer_date or order_estimated_delivery_date
 
+
+
