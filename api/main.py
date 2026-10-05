@@ -24,14 +24,14 @@ latest_report = None
 last_run_time = None
 
 # load data once at startup so we're not re-reading CSVs on every request
-BASE_PATH = r'C:\Users\taroo\OneDrive\Desktop\Project\data-quality-monitor\data\Brazillion Ecommerce'
+BASE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'Brazillion Ecommerce')
 
 @app.on_event("startup")
 def load_data():
     global orders, order_items, customers
-    orders = pd.read_csv(BASE_PATH + r'\olist_orders_dataset.csv')
-    order_items = pd.read_csv(BASE_PATH + r'\olist_order_items_dataset.csv')
-    customers = pd.read_csv(BASE_PATH + r'\olist_customers_dataset.csv')
+    orders = pd.read_csv(os.path.join(BASE_PATH, 'olist_orders_dataset.csv'))
+    order_items = pd.read_csv(os.path.join(BASE_PATH, 'olist_order_items_dataset.csv'))
+    customers = pd.read_csv(os.path.join(BASE_PATH, 'olist_customers_dataset.csv'))
     print("Data loaded successfully")
 
 

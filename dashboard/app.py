@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 from datetime import datetime
+import os
 
 # ── Page config ──────────────────────────────────────────────
 st.set_page_config(
@@ -9,7 +10,7 @@ st.set_page_config(
     layout="wide"
 )
 
-API_BASE = "http://127.0.0.1:8000"
+API_BASE = os.getenv("API_BASE", "http://127.0.0.1:8000")
 
 # ── Custom CSS ───────────────────────────────────────────────
 st.markdown("""
