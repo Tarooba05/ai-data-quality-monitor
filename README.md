@@ -120,20 +120,21 @@ Open `http://localhost:8501` in your browser.
 
 ## Project Structure
 
+```
 ai-data-quality-monitor/
 ├── api/
-│ └── main.py # FastAPI app with 3 endpoints
+│   └── main.py          # FastAPI app with 3 endpoints
 ├── checks/
-│ └── quality_checks.py # Anomaly detection functions
+│   └── quality_checks.py # Anomaly detection functions
 ├── dashboard/
-│ └── app.py # Streamlit dashboard
+│   └── app.py           # Streamlit dashboard
 ├── llm/
-│ └── explainer.py # Gemini LLM explanation layer
-├── data/ # Olist CSVs (not committed)
-├── notes/ # Exploration findings
-├── assets/ # Screenshots
+│   └── explainer.py     # Gemini LLM explanation layer
+├── data/                # Olist CSVs (not committed)
+├── notes/               # Exploration findings
+├── assets/              # Screenshots
 └── requirements.txt
-
+```
 
 ---
 
