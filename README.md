@@ -6,7 +6,7 @@ Built on the [Olist Brazilian E-commerce dataset](https://www.kaggle.com/dataset
 
 ---
 
-![Dashboard Preview](assets/dashboard_preview.jpg)
+![Dashboard Preview](assets/dashboard_preview.jpeg)
 
 ---
 
